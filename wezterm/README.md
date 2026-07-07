@@ -37,3 +37,12 @@ confg.default_prog = { "wsl.exe" }
 ```
 
 Now WezTerm will start directly in Ubuntu.
+
+## Set limit in wsl
+
+```shell
+powershell -Command "Set-Content -Path $env:USERPROFILE\.wslconfig -Value '[wsl2]', 'memory=10GB', 'processors=6', 'swap=4GB', 'pageReporting=true', 'autoMemoryReclaim=gradual'"
+
+# Restart
+wsl --shutdown
+```

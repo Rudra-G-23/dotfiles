@@ -1,0 +1,7 @@
+[wsl2]
+memory=10GB
+processors=6
+swap=4GB
+localhostForwarding=true
+pageReporting=true
+autoMemoryReclaim=gradual

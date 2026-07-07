@@ -31,4 +31,8 @@ config.cursor_blink_rate = 700
 config.window_background_opacity = 0.92
 config.text_background_opacity = 1.0
 
+
+-- Directly executes WSL Ubuntu at launch bypassing domain detection
+config.default_prog = { 'wsl.exe', '-d', 'Ubuntu', '--cd', '~' }
+
 return config
