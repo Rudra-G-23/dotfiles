@@ -4,3 +4,4 @@
 2. Install wezterm (Inside laptop)
 3. Install and make default zsh inside ubuntu 
 4. Make all changes inside zsh and add plugins.
+5. Set wsl limit and Aliases
