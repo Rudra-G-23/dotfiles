@@ -62,7 +62,7 @@ These are widely used and easy to remember.
 ```zsh
 alias g="git"
 
-alias gs="git status"
+alias gs="git status -s -b"
 alias ga="git add"
 alias gaa="git add ."
 

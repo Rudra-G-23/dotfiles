@@ -43,6 +43,8 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ------------------------------------------------------------------------------
 alias c="clear"
 alias reload="source ~/.zshrc"
+alias update="sudo apt update && sudo apt upgrade"
+alias clean="sudo apt autoremove && sudo apt autoclean"
 
 # ------------------------------------------------------------------------------
 # Better ls (eza)
@@ -70,18 +72,19 @@ alias home="cd ~"
 # ------------------------------------------------------------------------------
 
 alias gc="git clone"
+alias gf="git fetch"
 
-alias gs="git status"
+alias gs="git status -s -b"
 alias gd="git diff"
 
-alias glog="git log --oneline --graph --decorate --all -n 20"
+alias glog="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset' -n 20"
 
 alias ga="git add"
 alias gaa="git add ."
 
 alias gcm="git commit -m"
 
-alias gp="git push"
+alias gps="git push"
 alias gpl="git pull"
 
 alias gb="git branch"
