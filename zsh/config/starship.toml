@@ -11,12 +11,67 @@ $character
 """
 
 [directory]
+style = "bold cyan"
 truncation_length = 4
 truncate_to_repo = true
 fish_style_pwd_dir_length = 1
+read_only = " "
 
 [git_branch]
 symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "bold green"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+modified = "~${count}"
+staged = "+${count}"
+untracked = "?${count}"
+deleted = "-${count}"
+renamed = "»${count}"
+conflicted = "=${count}"
+
+[python]
+symbol = "🐍 "
+format = "[$symbol$virtualenv]($style)"
+detect_extensions = ["py"]
+detect_files = ["pyproject.toml", "requirements.txt"]
+detect_folders = [".venv"]
+
+[docker_context]
+symbol = "🐳 "
+
+[cmd_duration]
+min_time = 5000
+format = "took [$duration]($style)"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+add_newline = true
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$docker_context\
+$cmd_duration
+$character
+"""
+
+[directory]
+style = "bold cyan"
+truncation_length = 4
+truncate_to_repo = true
+fish_style_pwd_dir_length = 1
+read_only = " "
+
+[git_branch]
+symbol = " "
+style = "bold purple"
 
 [git_status]
 style = "bold green"

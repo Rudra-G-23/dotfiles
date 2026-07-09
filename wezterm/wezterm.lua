@@ -6,12 +6,15 @@ local config = wezterm.config_builder()
 -- Appearance
 --------------------------------------------------------------------------------
 
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = 'Dark Modern
 
--- config.font = wezterm.font('JetBrains Mono Nerd Font')
--- config.font_size = 12.0
+Config.font = wezterm.font("JetBrainsMono Nerd Font")
 
-config.line_height = 1.2
+Config.font_size = 12.0
+
+Config.enable_tab_bar = false
+
+config.line_height = 1.1
 
 --------------------------------------------------------------------------------
 -- Window

@@ -1,8 +1,104 @@
 {
-    "cSpell.words": [
-        "Catppuccin",
-        "confg",
-        "wexterm",
-        "wezterm"
-    ]
+    // ==========================================
+    // VS CODE DEFAULT SETTINGS (Core & Built-in)
+    // ==========================================
+
+    // Files 
+    "workbench.editor.empty.hint": "hidden",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveWhenNoErrors": true,
+    "files.autoSaveWorkspaceFilesOnly": true,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.ipynb_checkpoints": true
+    },
+    "editor.cursorBlinking": "expand",
+
+    // VS code Front 
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', Consolas, monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "scm.inputFontFamily": "'JetBrainsMono Nerd Font'",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "terminal.integrated.fontSize": 14,
+    "window.systemColorTheme": "dark",
+    "editor.inlayHints.fontFamily": "'JetBrainsMono Nerd Font'",
+
+    // Workshop 
+    "workbench.colorTheme": "Dark Modern",
+    "workbench.preferredDarkColorTheme": "Dark Modern",
+    "workbench.preferredHighContrastColorTheme": "Dark Modern",
+    "workbench.preferredHighContrastLightColorTheme": "Dark Modern",
+    "workbench.preferredLightColorTheme": "Dark Modern",
+    "workbench.browser.showInTitleBar": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+    // Git
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never",
+    "debug.showVariableTypes": true,
+
+    // Notebook
+    "notebook.lineNumbers": "on",
+    "notebook.outline.showCodeCellSymbols": false,
+    "notebook.output.textLineLimit": 150,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "notebook.source.fixAll": "explicit",
+        "notebook.source.organizeImports": "explicit"
+    },
+    "notebook.markup.fontFamily": "'JetBrainsMono Nerd Font'",
+    "interactiveWindow.executeWithShiftEnter": true,
+
+
+    // ==========================================
+    // EXTENSION SETTINGS (Downloaded)
+    // ==========================================
+
+    // Tabnine
+    "tabnine.experimentalAutoImports": true,
+
+    // Ruff
+    "ruff.nativeServer": "auto",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+
+    // Python / Jupyter
+    "python.languageServer": "Default",
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+
+    // Data Wrangler
+    "dataWrangler.startInEditModeForNotebookEntrypoints": true,
+
+    // Draw.io
+    "hediet.vscode-drawio.resizeImages": null,
+
+    // Markdown Preview Enhanced
+    "markdown-preview-enhanced.alwaysShowBacklinksInPreview": false,
+    "markdown-preview-enhanced.enablePreviewZenMode": false,
+
+    // Material Icon Theme
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.associations": {
+        "references": "docs",
+        "workflows": "context"
+    },
+
+    // Code Spell Checker (cSpell)
+    "cSpell.autoFormatConfigFile": false,
+    "cSpell.language": "en",  
+    "cSpell.userWords": [],
+    "cSpell.dictionaries": [
+        "Rudra Prasad Bhuyan"
+    ],
 }
