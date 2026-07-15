@@ -14,6 +14,17 @@ eval "$(starship init zsh)"
 # Jump to frequently used directories
 eval "$(zoxide init zsh)"
 
+
+# ------------------------------------------------------------------------------
+# npm & nvm
+# ------------------------------------------------------------------------------
+export PATH="$HOME/.npm-global/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+
+# Load NVM and its completions if they exist
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 # ------------------------------------------------------------------------------
 # FZF (Fuzzy Finder)
 # ------------------------------------------------------------------------------
@@ -61,8 +72,15 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-# Your projects folder
-alias cdp="cd ~/projects"
+# Open VS code 
+alias vs="code ."
+
+# My fav folders
+alias pro="cd ~/projects"
+alias test="cd ~/test"
+alias learn="cd ~/learn"
+alias open="cd ~/open"
+alias work="cd ~/work"
 
 # Go Home
 alias home="cd ~"
@@ -77,7 +95,7 @@ alias gf="git fetch"
 alias gs="git status -s -b"
 alias gd="git diff"
 
-alias glog="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset' -n 20"
+alias glog="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset' -n 10"
 
 alias ga="git add"
 alias gaa="git add ."
@@ -124,3 +142,4 @@ bindkey '^H' backward-kill-word
 
 # Ctrl + Delete
 bindkey '^[[3;5~' kill-word
+. "$HOME/.local/bin/env"
