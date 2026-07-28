@@ -69,7 +69,7 @@
     },
 
     // Python / Jupyter
-    "python.languageServer": "None",
+    "python.languageServer": "Default",
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "jupyter.widgetScriptSources": [
         "jsdelivr.com",
@@ -101,5 +101,8 @@
         "prasad",
         "bhuyan"
     ],
-    "cSpell.dictionaries": []
+    "cSpell.dictionaries": [],
+
+    // Live Server (for web app preview)
+    "liveServer.settings.donotShowInfoMsg": true
 }
