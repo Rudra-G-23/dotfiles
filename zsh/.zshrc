@@ -76,11 +76,11 @@ alias ....="cd ../../.."
 alias vs="code ."
 
 # My fav folders
-alias pro="cd ~/projects"
-alias test="cd ~/test"
-alias learn="cd ~/learn"
-alias open="cd ~/open"
-alias work="cd ~/work"
+alias p="cd ~/projects"
+alias t="cd ~/test"
+alias l="cd ~/learn"
+alias o="cd ~/open"
+alias w="cd ~/work"
 
 # Go Home
 alias home="cd ~"
@@ -95,7 +95,7 @@ alias gf="git fetch"
 alias gs="git status -s -b"
 alias gd="git diff"
 
-alias glog="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset' -n 10"
+alias glog="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset' -n 5"
 
 alias ga="git add"
 alias gaa="git add ."
@@ -123,6 +123,18 @@ alias deact="deactivate"
 alias uvs="uv sync"
 alias uva="uv add"
 alias uvr="uv remove"
+
+# ------------------------------------------------------------------------------
+# Ollama 
+# ------------------------------------------------------------------------------
+# For ollama
+alias ol="ollama"
+alias ol-l="ollama list"
+alias ol-r="ollama ps"
+
+# For autocompletion
+alias ol-a="ollama run qwen2.5-coder:0.5b"
+alias ol-s="ollama ps | awk 'NR>1 {print \$1}' | xargs -I {} ollama stop {}"
 
 # ==============================================================================
 # TERMINAL KEYBINDINGS | ctrl + Arrow / Delete Key Bindings (WezTerm)

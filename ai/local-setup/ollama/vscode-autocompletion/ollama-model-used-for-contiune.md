@@ -2,6 +2,9 @@
 
 Given the constraints (AMD Ryzen 5 5500U, 6 cores, ~8GB usable RAM in WSL), running two smaller models is required to avoid crashing.
 
+
+https://ollama.com/blog/continue-code-assistant
+
 ## 1. Models Used
 
 | Role | Model | Why |
