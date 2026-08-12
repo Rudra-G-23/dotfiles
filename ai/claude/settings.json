@@ -1,0 +1,13 @@
+{
+    "effortLevel": "medium",
+    "attribution": {
+        "commit": "",
+        "pr": ""
+    },
+    "permissions": {
+        "ask": [
+            "Bash(git push *)",
+            "Bash(gh pr create *)"
+        ]
+    }
+}
