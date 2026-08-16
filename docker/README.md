@@ -1,3 +1,6 @@
-- Simple YT search
-- A random video: [Link](https://youtu.be/3YlxYZK1x_o?si=jQABLNiiyglahfQc)
-- Docker Downloaded Date: 27-07-2026
+# Docker
+
+Notes on Docker setup for WSL.
+
+- Installed: 27-07-2026
+- Docs: https://docs.docker.com/desktop/wsl/

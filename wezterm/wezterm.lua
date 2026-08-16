@@ -5,14 +5,13 @@ local config = wezterm.config_builder()
 --------------------------------------------------------------------------------
 -- Appearance
 --------------------------------------------------------------------------------
+config.color_scheme = "Dark Modern"
 
-config.color_scheme = 'Dark Modern
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 
-Config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font_size = 12.0
 
-Config.font_size = 12.0
-
-Config.enable_tab_bar = false
+config.enable_tab_bar = false
 
 config.line_height = 1.1
 

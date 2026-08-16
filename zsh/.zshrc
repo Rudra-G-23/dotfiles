@@ -83,7 +83,7 @@ alias o="cd ~/open"
 alias w="cd ~/work"
 
 # Go Home
-alias home="cd ~"
+alias h="cd ~"
 
 # ------------------------------------------------------------------------------
 # Git
@@ -135,6 +135,16 @@ alias ol-r="ollama ps"
 # For autocompletion
 alias ol-a="ollama run qwen2.5-coder:0.5b"
 alias ol-s="ollama ps | awk 'NR>1 {print \$1}' | xargs -I {} ollama stop {}"
+
+# ------------------------------------------------------------------------------
+# Claude & Multi agents
+# ------------------------------------------------------------------------------
+# Claude code
+alias cc="claude"
+
+# Multiagent herdr
+alias hh="herdr"
+
 
 # ==============================================================================
 # TERMINAL KEYBINDINGS | ctrl + Arrow / Delete Key Bindings (WezTerm)
