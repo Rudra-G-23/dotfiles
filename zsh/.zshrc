@@ -137,10 +137,13 @@ alias ol-a="ollama run qwen2.5-coder:0.5b"
 alias ol-s="ollama ps | awk 'NR>1 {print \$1}' | xargs -I {} ollama stop {}"
 
 # ------------------------------------------------------------------------------
-# Claude & Multi agents
+# AI & Multi agents
 # ------------------------------------------------------------------------------
 # Claude code
 alias cc="claude"
+
+## Codex
+alias cx="codex"
 
 # Multiagent herdr
 alias hh="herdr"
@@ -165,3 +168,4 @@ bindkey '^H' backward-kill-word
 # Ctrl + Delete
 bindkey '^[[3;5~' kill-word
 . "$HOME/.local/bin/env"
+. "$HOME/.cargo/env"
