@@ -1,29 +1,10 @@
 ## Codex CLI
 
-### macOS/Linux
+Codex skills are tracked in `skills/` and installed under `~/.codex/skills/`.
 
-```bash
-curl -fsSL https://chatgpt.com/codex/install.sh | sh
-```
+- `grill-me` — structured rounds for stress-testing plans and decisions
+- `yes-no-ans` — strict yes/no answers
 
-Then start it in your project:
-
-```bash
-cd path/to/your/project
-codex
-```
-
-On first run, sign in with ChatGPT in your browser.
-
-### With npm
-
-```bash
-npm install -g @openai/codex
-codex
-```
-
-### Windows
-
-Use WSL (Ubuntu), then follow the macOS/Linux steps.
-
-Docs: [Codex CLI](https://learn.chatgpt.com/docs/codex/cli)
+Command execution rules are tracked in `rules/default.rules` and installed as
+`~/.codex/rules/default.rules`. Risky Git operations, including `git pull`, are
+forbidden for Codex.
