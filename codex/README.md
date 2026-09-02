@@ -10,6 +10,18 @@ the Claude link changed to `../.agents/skills`.
 
 - `grill-me` — structured rounds for stress-testing plans and decisions
 - `quick-ans` — concise answers with a brief explanation
+- `shared-skill-library` — maintains the shared Codex and Claude Code skill links
+
+Verified upstream skills are stored in
+`.vscode/verified-original-skills-downloader/original-skills/` and exposed here
+through relative symlinks:
+
+- `domain-modeling` — maintains project terminology, context, and ADRs
+- `codebase-design` — designs deep, testable modules and clean seams
+- `code-review` — checks diffs against repository standards and specifications
+- `shadcn` — manages shadcn/ui components and composition
+- `emil-design-eng` — improves UI polish, component design, and animation
+- `thermo-nuclear-code-quality-review` — runs an exceptionally strict quality review
 
 Every skill has `disable-model-invocation: true`, so it runs only when the user
 explicitly invokes it.
