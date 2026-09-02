@@ -18,4 +18,4 @@ Personal setup notes and config for a WSL2 + Ubuntu + Zsh + WezTerm + VS Code en
 - [`ollama/`](ollama) — local LLMs via Ollama, incl. VS Code autocompletion setup
 - [`claude/`](claude) — Claude Code settings reference
 - [`herdr/`](herdr) — multi-agent terminal tool
-- [`skills/`](skills) — Claude Code skills
+- [`codex/skills/`](codex/skills) — shared, user-invoked skills for Codex and Claude Code

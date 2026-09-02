@@ -153,17 +153,40 @@ alias hh="herdr"
 
 
 # ==============================================================================
-# TERMINAL KEYBINDINGS | ctrl + Arrow / Delete Key Bindings (WezTerm)
+# TERMINAL KEYBINDINGS
 # ==============================================================================
+
+# Use standard Emacs-style shell keybindings
+bindkey -e
 
 autoload -U select-word-style
 select-word-style bash
+
+# ------------------------------------------------------------------------------
+# Arrow keys
+# ------------------------------------------------------------------------------
+
+# Up / Down -> command history
+bindkey '^[[A' up-line-or-history
+bindkey '^[[B' down-line-or-history
+
+# Left / Right
+bindkey '^[[D' backward-char
+bindkey '^[[C' forward-char
+
+# ------------------------------------------------------------------------------
+# Ctrl + Arrow
+# ------------------------------------------------------------------------------
 
 # Ctrl + Left
 bindkey '^[[1;5D' backward-word
 
 # Ctrl + Right
 bindkey '^[[1;5C' forward-word
+
+# ------------------------------------------------------------------------------
+# Delete / Backspace
+# ------------------------------------------------------------------------------
 
 # Ctrl + Backspace
 bindkey '^H' backward-kill-word
@@ -172,3 +195,7 @@ bindkey '^H' backward-kill-word
 bindkey '^[[3;5~' kill-word
 . "$HOME/.local/bin/env"
 . "$HOME/.cargo/env"
+
+# Traccia local dev stack (dashboard-service, trace-injection-service, frontend)
+alias traccia-dev-start="/home/rudra/work/t/start-traccia-local.sh"
+alias traccia-dev-stop="pkill -f 'uvicorn app.main:app --port 8001'; pkill -f 'uvicorn app.main:app --port 8000'; pkill -f 'vite dev --port 5173'"

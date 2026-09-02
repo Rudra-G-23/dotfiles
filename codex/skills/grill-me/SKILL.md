@@ -1,6 +1,7 @@
 ---
 name: grill-me
 description: Relentlessly stress-test a plan, decision, or idea through structured rounds of questions.
+disable-model-invocation: true
 ---
 
 Interview the user relentlessly until you reach a shared understanding. Model the discussion as a design tree: each decision branches into the decisions that depend on it.
