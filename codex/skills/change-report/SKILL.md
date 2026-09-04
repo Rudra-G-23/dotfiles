@@ -26,8 +26,6 @@ When in doubt, judge by size and risk, not by how the task was phrased: if the c
 - Structure the report as markdown headers, one per section below, in order.
 - Under each header, write bullet points - do not write prose paragraphs.
 - Omit a section entirely if it does not apply (say so with one bullet, do not force empty sections in). Do not fabricate content for a section that does not apply.
-- No emojis anywhere in the report.
-- Use only the plain hyphen (-) for dash punctuation - never an em dash or en dash.
 - Be specific: name real files, real line ranges, real test names and counts. Do not summarize vaguely when a concrete detail is available.
 
 ## Sections
@@ -66,5 +64,6 @@ When in doubt, judge by size and risk, not by how the task was phrased: if the c
 - Anything intentionally deferred, known gaps, or next steps. Omit if there are none.
 
 ### Commit
+- Don't commit if user explictly not said in prompt.
 - Commit hash and message, branch name, and whether it has been pushed.
 - If nothing was committed, say so explicitly.
