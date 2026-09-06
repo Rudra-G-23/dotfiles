@@ -1,2 +1,0 @@
-The screenshot labels feature-orchestrator as "my skill - orchestration".
-No exact public upstream can be verified from the screenshot alone, so this bundle does not replace it with a similarly named but potentially different skill.
