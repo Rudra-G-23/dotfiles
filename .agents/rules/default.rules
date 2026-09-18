@@ -1,0 +1,16 @@
+# Keep Codex from executing Git operations that can change repository state or remote state.
+prefix_rule(pattern=["git pull"], decision="forbidden")
+prefix_rule(pattern=["git push"], decision="forbidden")
+prefix_rule(pattern=["gh pr create"], decision="forbidden")
+prefix_rule(pattern=["git fetch"], decision="forbidden")
+prefix_rule(pattern=["git remote"], decision="forbidden")
+prefix_rule(pattern=["git reset --hard"], decision="forbidden")
+prefix_rule(pattern=["git clean"], decision="forbidden")
+prefix_rule(pattern=["git checkout --"], decision="forbidden")
+prefix_rule(pattern=["git restore"], decision="forbidden")
+prefix_rule(pattern=["git branch -D"], decision="forbidden")
+prefix_rule(pattern=["git branch --delete --force"], decision="forbidden")
+prefix_rule(pattern=["git rebase"], decision="forbidden")
+
+# Existing project-specific permission.
+prefix_rule(pattern=[".venv/bin/pytest"], decision="allow")

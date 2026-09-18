@@ -83,7 +83,7 @@ alias o="cd ~/open"
 alias w="cd ~/work"
 
 # Go Home
-alias home="cd ~"
+alias h="cd ~"
 
 # ------------------------------------------------------------------------------
 # Git
@@ -94,18 +94,21 @@ alias gf="git fetch"
 
 alias gs="git status -s -b"
 alias gd="git diff"
+alias gnum='git diff HEAD --numstat'
 
-alias glog="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset' -n 5"
+alias gl5="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset' -n 5"
+alias gl="git log --graph --all --pretty=format:'%C(auto)%h%d %s %C(green)(%cr) %C(bold blue)<%an>%Creset'"
+
 
 alias ga="git add"
-alias gaa="git add ."
+alias gaa="git add -A"
 
 alias gcm="git commit -m"
 
-alias gps="git push"
+alias gps="git push -u origin"
 alias gpl="git pull"
 
-alias gb="git branch"
+alias gb="git branch -vv --all"
 
 alias gco="git checkout"
 alias gcb="git checkout -b"
@@ -136,12 +139,44 @@ alias ol-r="ollama ps"
 alias ol-a="ollama run qwen2.5-coder:0.5b"
 alias ol-s="ollama ps | awk 'NR>1 {print \$1}' | xargs -I {} ollama stop {}"
 
+# ------------------------------------------------------------------------------
+# AI & Multi agents
+# ------------------------------------------------------------------------------
+# Claude code
+alias cc="claude"
+
+## Codx
+alias cx="codex"
+
+# Multiagent herdr
+alias hh="herdr"
+
+
 # ==============================================================================
-# TERMINAL KEYBINDINGS | ctrl + Arrow / Delete Key Bindings (WezTerm)
+# TERMINAL KEYBINDINGS
 # ==============================================================================
+
+# Use standard Emacs-style shell keybindings
+bindkey -e
 
 autoload -U select-word-style
 select-word-style bash
+
+# ------------------------------------------------------------------------------
+# Arrow keys
+# ------------------------------------------------------------------------------
+
+# Up / Down -> command history
+bindkey '^[[A' up-line-or-history
+bindkey '^[[B' down-line-or-history
+
+# Left / Right
+bindkey '^[[D' backward-char
+bindkey '^[[C' forward-char
+
+# ------------------------------------------------------------------------------
+# Ctrl + Arrow
+# ------------------------------------------------------------------------------
 
 # Ctrl + Left
 bindkey '^[[1;5D' backward-word
@@ -149,9 +184,18 @@ bindkey '^[[1;5D' backward-word
 # Ctrl + Right
 bindkey '^[[1;5C' forward-word
 
+# ------------------------------------------------------------------------------
+# Delete / Backspace
+# ------------------------------------------------------------------------------
+
 # Ctrl + Backspace
 bindkey '^H' backward-kill-word
 
 # Ctrl + Delete
 bindkey '^[[3;5~' kill-word
 . "$HOME/.local/bin/env"
+. "$HOME/.cargo/env"
+
+# Traccia local dev stack (dashboard-service, trace-injection-service, frontend)
+alias traccia-dev-start="/home/rudra/work/t/start-traccia-local.sh"
+alias traccia-dev-stop="pkill -f 'uvicorn app.main:app --port 8001'; pkill -f 'uvicorn app.main:app --port 8000'; pkill -f 'vite dev --port 5173'"
