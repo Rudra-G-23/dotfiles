@@ -32,10 +32,9 @@ Currently maintained shared skills:
 - `quick-ans` - concise answers with a brief explanation
 - `shared-skill-library` - maintains the Codex and Claude Code skill links
 
-Locally maintained skills use `disable-model-invocation: true` when they should
-run only after explicit user invocation. `change-report` is the exception: its
-description allows automatic use after a non-trivial feature, bug fix, or
-refactor.
+All shared skills are available for automatic agent invocation. Keep
+`disable-model-invocation` out of shared skill frontmatter unless a skill is
+deliberately being made user-only.
 
 If this repository moves, repair the three global links above. Verify them with:
 
